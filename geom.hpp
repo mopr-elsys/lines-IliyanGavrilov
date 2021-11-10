@@ -86,11 +86,11 @@ struct Line {
 
     Line perpendicular(const Point& p) {
         double x = p.x, y = p.y;
-        double a = -B, b = A, c = -(a*x+b*y);;
-        if(C == 0)
-        {
-            c = 0;
-        }
+        double a = -B, b = A, c = -(a*x+b*y);
+        //if(C == 0)
+        //{
+        //    c = 0;
+        //}
 
         return Line(a,b,c);
     }
