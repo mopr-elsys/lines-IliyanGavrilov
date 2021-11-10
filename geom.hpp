@@ -37,13 +37,13 @@ struct Line {
         double x1 = p1.x, y1 = p1.y;
         double x2 = p2.x, y2 = p2.y;
 
-        A = y1 - y2;
-        B = -1;//x2 - x1;
-        C = A * (x1) - B * (y1);
+        //A = y1 - y2;
+        //B = x2 - x1;
+        //C = A * (x1) - B * (y1);
 
-        //A = (y2 - y1) / (x2 - x1);
-        //B = -1;
-        //C = y1 - x1*A;
+        A = (y2 - y1) / (x2 - x1);
+        B = -1;
+        C = y1 - x1*A;
     }
 
     bool parallel(const Line& other) const {
