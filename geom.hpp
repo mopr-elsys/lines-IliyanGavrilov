@@ -59,7 +59,7 @@ struct Line {
     }
 
     Line parallel(const Point& p) { // COLLINEAR NOT PARALLEL (NOT STATED IN THE TASK)
-        double a=A, b=-1, c;
+        double a = A, b = -1, c;
         double x = p.x, y = p.y;
 
         if(A*x+B*y+C == 0)
@@ -85,9 +85,12 @@ struct Line {
     }
 
     Line perpendicular(const Point& p) {
-        double a=-B, b=A, c;
         double x = p.x, y = p.y;
-        c = -(a*x+b*y);
+        double a = -B, b = A, c = -(a*x+b*y);;
+        if(C == 0)
+        {
+            c = 0;
+        }
 
         return Line(a,b,c);
     }
