@@ -46,15 +46,11 @@ struct Line {
     }
 
     bool parallel(const Line& other) const {
-        if(B == other.B)
-        {
-            return 0;
-        }
         //if((-(A/B)) == (-(other.A/other.B)))
         //{
         //    return 1;
         //}
-        if(A == other.A)
+        if(A == other.A && C != other.C)
         {
             return 1;
         }
