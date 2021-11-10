@@ -46,7 +46,7 @@ struct Line {
     }
 
     bool parallel(const Line& other) const {
-        if(b == other.B)
+        if(B == other.B)
         {
             return 0;
         }
