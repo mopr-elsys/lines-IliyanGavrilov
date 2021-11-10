@@ -43,7 +43,7 @@ struct Line {
     }
 
     bool parallel(const Line& other) const {
-
+        return true;
     }
 
     Line parallel(const Point& p) {
