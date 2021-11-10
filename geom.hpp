@@ -50,10 +50,10 @@ struct Line {
         {
             return 0;
         }
-        if((-(A/B)) == (-(other.A/other.B)))
-        {
-            return 1;
-        }
+        //if((-(A/B)) == (-(other.A/other.B)))
+        //{
+        //    return 1;
+        //}
         if(A == other.A && B != other.B)
         {
             return 1;
