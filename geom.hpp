@@ -55,9 +55,7 @@ struct Line {
             }
         }
 
-
         return 0;
-        //return eq(A/other.A, B/other.B);
     }
 
     Line parallel(const Point& p) { // COLLINEAR NOT PARALLEL (NOT STATED IN THE TASK)
@@ -72,13 +70,13 @@ struct Line {
         {
             b=0;
         }
-        c=-(a*x+b*y);
-        //ax+by+c=0 c=-ax-by
+        c = -(a*x+b*y);
+
         return Line(a, b, c);
     }
 
     bool perpendicular(const Line& other) const {
-        if((other.A == -B && other.B == A) || other.A == B && other.B == -A)
+        if((other.A == -B && other.B == A) || (other.A == B && other.B == -A))
         {
             return 1;
         }
@@ -87,7 +85,11 @@ struct Line {
     }
 
     Line perpendicular(const Point& p) {
-        return Line(0,0,0);
+        double a=-B, b=A, c;
+        double x = p.x, y = p.y;
+        c = -(a*x+b*y);
+
+        return Line(a,b,c);
     }
 
     void print(ostream& out) const {
