@@ -42,7 +42,7 @@ struct Line {
         C = A * (x1) - B * (y1);
         if(B == 0)
         {
-            B = -B;
+            C = -C;
         }
 
         //A = (y2 - y1) / (x2 - x1);
