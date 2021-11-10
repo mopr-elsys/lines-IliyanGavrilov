@@ -46,7 +46,13 @@ struct Line {
     }
 
     bool parallel(const Line& other) const {
-        return eq(A/other.A, B/other.B);
+        if((-(A/B)) == (-(other.A/other.B)))
+        {
+            return 1;
+        }
+
+        return 0;
+        //return eq(A/other.A, B/other.B);
     }
 
     Line parallel(const Point& p) {
