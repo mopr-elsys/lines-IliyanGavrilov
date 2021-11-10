@@ -60,7 +60,13 @@ struct Line {
     }
 
     Line parallel(const Point& p) {
-        return Line(0,0,0);
+        double a, b, c;
+        a = A;
+        //ax+by+c=0
+        //(p.x)*a+b*(p.y)+c=0
+        c=-(p.x*a+p.y);
+        b=-((p.x)*a-c)/(p.y);
+        return Line(a,b,c);
     }
 
     bool perpendicular(const Line& other) const {
