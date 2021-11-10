@@ -39,7 +39,7 @@ struct Line {
 
         A = y1 - y2;
         B = x2 - x1;
-        C = A * (x1) + B * (y1);
+        C = A * (x1) - B * (y1);
         //A = (y2 - y1) / (x2 - x1);
         //B = -1;
         //C = y1 - x1*A;
