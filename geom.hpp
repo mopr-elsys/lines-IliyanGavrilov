@@ -40,6 +40,7 @@ struct Line {
         A = y1 - y2;
         B = x2 - x1;
         C = A * (x1) - B * (y1);
+
         //A = (y2 - y1) / (x2 - x1);
         //B = -1;
         //C = y1 - x1*A;
@@ -77,7 +78,12 @@ struct Line {
     }
 
     bool perpendicular(const Line& other) const {
-        return true;
+        if(other.A == -B && other.B == A)
+        {
+            return 1;
+        }
+
+        return 0;
     }
 
     Line perpendicular(const Point& p) {
