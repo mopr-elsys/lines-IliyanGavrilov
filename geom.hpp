@@ -78,7 +78,7 @@ struct Line {
     }
 
     bool perpendicular(const Line& other) const {
-        if((other.A == -B && other.B == A) || A*other.A == -1)
+        if((other.A == -B && other.B == A) || other.A == B && other.B == -A)
         {
             return 1;
         }
