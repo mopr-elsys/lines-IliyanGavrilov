@@ -60,10 +60,13 @@ struct Line {
     }
 
     Line parallel(const Point& p) {
-        double a, b, c;
+        double a=A, b=-1, c;
         double x = p.x, y = p.y;
-        a = A;
-        b=-1;
+
+        if(B == 0)
+        {
+            b=0;
+        }
         c=-(a*x+b*y);
         //ax+by+c=0 c=-ax-by
         return Line(a,b,c);
