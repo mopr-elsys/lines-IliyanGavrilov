@@ -63,9 +63,9 @@ struct Line {
         double a, b, c;
         double x = p.x, y = p.y;
         a = A;
+        b=-1;
+        c=-(a*x+b*y);
         //ax+by+c=0 c=-ax-by
-        c=-(x*a+y);
-        b=-(x*a+c)/y;
         return Line(a,b,c);
     }
 
