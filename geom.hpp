@@ -38,7 +38,7 @@ struct Line {
         double x2 = p2.x, y2 = p2.y;
 
         A = -(y2 - y1);
-        B = x1 - x2;
+        B = -1;
         C = A * (x1) + B * (y1);
         //A = (y2 - y1) / (x2 - x1);
         //B = -1;
