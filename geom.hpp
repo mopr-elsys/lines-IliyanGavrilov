@@ -50,7 +50,7 @@ struct Line {
         //{
         //    return 1;
         //}
-        if(A == other.A && C != other.C)
+        if((A == other.A && C != other.C) || (B == 0 && other.B == 0))
         {
             return 1;
         }
