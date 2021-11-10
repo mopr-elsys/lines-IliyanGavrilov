@@ -39,11 +39,11 @@ struct Line {
 
         A = (y2 - y1) / (x2 - x1);
         B = -1;
-        C = y1 - x1*((y2 - y1)/ (x2 - x1));
+        C = y1 - x1*A;
     }
 
     bool parallel(const Line& other) const {
-        return eq(A/other.A, B/other.B);
+
     }
 
     Line parallel(const Point& p) {
@@ -56,7 +56,7 @@ struct Line {
 
     Line perpendicular(const Point& p) {
         return Line(0,0,0);
-    }
+    }//return eq(A/other.A, B/other.B);
 
     void print(ostream& out) const {
         out<< A << "x + "<< B<< "y + "<< C<< " = 0";
