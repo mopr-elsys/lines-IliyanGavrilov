@@ -46,7 +46,7 @@ struct Line {
     }
 
     bool parallel(const Line& other) const {
-        if(fmod(A,other.A) == 0 && fmod(B,other.B) && fmod(C,other.C) == 0)
+        if(b == other.B)
         {
             return 0;
         }
@@ -54,7 +54,7 @@ struct Line {
         //{
         //    return 1;
         //}
-        if(A == other.A && B != other.B)
+        if(A == other.A)
         {
             return 1;
         }
