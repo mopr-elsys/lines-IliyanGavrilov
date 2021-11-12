@@ -45,7 +45,7 @@ struct Line {
         }
         else
         {
-            C = -(A * (x1)) - B * (y1);
+            C = A * (x2) - B * (y2);
         }
         if(B == 0)
         {
