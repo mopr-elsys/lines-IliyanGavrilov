@@ -37,9 +37,16 @@ struct Line {
         double x1 = p1.x, y1 = p1.y;
         double x2 = p2.x, y2 = p2.y;
 
-        A = y1 - y2; //-4.6
-        B = x2 - x1; //2.4
-        C = -(A * (x1)) - B * (y1); //11.04 -
+        A = y1 - y2;
+        B = x2 - x1;
+        if(x1>=0)
+        {
+            C = A * (x1) - B * (y1);
+        }
+        else
+        {
+            C = -(A * (x1)) - B * (y1);
+        }
         if(B == 0)
         {
             C = -C;
